@@ -1,0 +1,50 @@
+body{
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr 1fr;
+    height: 100vh;
+}
+
+.navigationsleiste{
+    background-color: red;
+    grid-column: 1/2;
+    grid-row: 1/6;
+    resize: vertical;
+    overflow: auto;
+    user-select: none;
+    width: 20vw;
+    z-index: 1;
+}
+
+.navigationsleisteResizer{
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    background-color: rgb(255, 255, 255);
+    user-select: none;
+}
+
+.kopfleiste{
+    background-color: blue;
+    grid-column: 2/6;
+    grid-row: 1/2;
+    height: 20vh;
+}
+
+.kopfleisteResizer{
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    user-select: none;
+}
+
+.mitteilungsboard{
+    grid-column: 2/6;
+    grid-row: 2/6;
+}
+
+.mitteilungsboard{
+    background-color: green;
+}
