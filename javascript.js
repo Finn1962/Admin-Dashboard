@@ -8,6 +8,8 @@ const kopfleiste = document.getElementById("kopfleiste");
 const kopfleisteResizer = document.getElementById("kopfleisteResizer");
 
 
+
+//////////////////////////////////////////////////////////////////////////Abschnitt für Resizing//
 document.addEventListener("DOMContentLoaded",()=> {
     navigationsleisteResizer.style.left = navigationsleiste.offsetWidth + "px";
     navigationsleisteResizer.style.height = (document.body.offsetHeight - kopfleiste.offsetHeight) + "px";
@@ -37,9 +39,16 @@ document.addEventListener("mouseup", ()=> {
 document.addEventListener("mousemove",(ereigniss)=>{ 
     if (!mousedown || (!mouseoverNavResizer && !mouseoverKopfResizer)) return;
     if (mouseoverNavResizer) {
-        const neueWeite = ereigniss.clientX + "px";
-        navigationsleiste.style.width = neueWeite;
-        navigationsleisteResizer.style.left = neueWeite;
+        const neueWeite = ereigniss.clientX;
+        navigationsleiste.style.width = neueWeite  + "px";
+        const abstand = navigationsleisteResizer.getBoundingClientRect();
+        if (abstand.left > 140){ //Ohne die drei Ifabfragen, bugt das Programm und der Resizer fährt sich fest
+            navigationsleisteResizer.style.left = neueWeite  + "px";
+        } else if (ereigniss.clientX > 140){
+            navigationsleisteResizer.style.left = neueWeite  + "px";
+        } else if (abstand.left < 140){
+            navigationsleisteResizer.style.left = 140 + "px";
+        }
     } 
     if (mouseoverKopfResizer) {
         const neueWeite = ereigniss.clientY + "px";
@@ -48,3 +57,6 @@ document.addEventListener("mousemove",(ereigniss)=>{
         navigationsleisteResizer.style.height = (document.body.offsetHeight - kopfleiste.offsetHeight) + "px";
     }
 });
+
+
+//////////////////////////////////////////////////////////////////////////Abschnitt für Resizing//

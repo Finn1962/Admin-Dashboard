@@ -1,1 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 3V11H21V3H13M3 21H11V13H3V21M3 3V11H11V3H3M13 16H16V13H18V16H21V18H18V21H16V18H13V16Z" /></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.14 50.81">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: Roboto-LightItalic, Roboto;
+        font-size: 12px;
+        font-style: italic;
+        font-weight: 300;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <text class="cls-1" transform="translate(14.27 41.28)"><tspan x="0" y="0">Dashboa</tspan><tspan class="cls-3" x="45.38" y="0">r</tspan><tspan x="49.19" y="0">d</tspan></text>
+  <path class="cls-2" d="M16.59,0v13.28h13.28V0h-13.28M0,29.87h13.28v-13.28H0v13.28M0,0v13.28h13.28V0H0M16.59,21.57h4.98v-4.98h3.32v4.98h4.98v3.32h-4.98v4.98h-3.32v-4.98h-4.98v-3.32Z"/>
+</svg>
